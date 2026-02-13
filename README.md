@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Завод филамента для 3D-принтеров</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f7fa;
+      color: #333;
+    }
+    header {
+      background-color: #004d99;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 8px 0 0;
+      font-size: 1.1rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      background: #fff;
+      border-radius: 8px;
+      padding: 30px 25px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      margin-top: 0;
+      color: #004d99;
+    }
+    .desc {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin: 10px 0 5px;
+      font-weight: 600;
+    }
+    input, select, textarea, button {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #004d99;
+      outline: none;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #004d99;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #003366;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+      color: #666;
+      background-color: #eaeaea;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Завод филамента для 3D-принтеров</h1>
+  <p>Качественные материалы и сервис для вашего 3D-принтера</p>
+</header>
+
+<main>
+  <section>
+    <h2>О заводе</h2>
+    <p class="desc">
+      Мы производим высококачественный филамент для 3D-принтеров, подходящий как для новичков, так и для профессионалов. Наши материалы обеспечивают стабильное качество печати и совместимость с большинством моделей 3D-принтеров.
+    </p>
+  </section>
+
+  <section>
+    <h2>Запись на мастер-класс</h2>
+    <form id="masterclass-form">
+      <label for="nameMC">Ваше имя</label>
+      <input type="text" id="nameMC" name="nameMC" required placeholder="Введите ваше имя" />
+
+  <label for="emailMC">Email</label>
+      <input type="email" id="emailMC" name="emailMC" required placeholder="Введите ваш email" />
+
+   <label for="phoneMC">Телефон</label>
+      <input type="tel" id="phoneMC" name="phoneMC" placeholder="+7 ___ ___ ____" />
+
+  <label for="experienceMC">Ваш уровень опытности</label>
+      <select id="experienceMC" name="experienceMC&quot; required>
+        <option value="" disabled selected>Выберите уровень</option>
+        <option value="beginner">Новичок</option>
+        <option value="intermediate">Средний</option>
+        <option value="advanced">Продвинутый</option>
+      </select>
+
+  <button type="submit">Записаться</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Вызов мастера для починки 3D-принтера</h2>
+    <form id="repair-form">
+      <label for="nameRepair">Ваше имя</label>
+      <input type="text" id="nameRepair" name="nameRepair" required placeholder="Введите ваше имя" />
+
+  <label for="phoneRepair">Телефон</label>
+      <input type="tel" id="phoneRepair" name="phoneRepair" required placeholder="+7 ___ ___ ____" />
+
+  <label for="printerModel">Модель 3D-принтера</label>
+      <input type="text" id="printerModel" name="printerModel" placeholder="Например, Prusa i3 MK3" />
+
+   <label for="problemDescription">Описание проблемы</label>
+      <textarea id="problemDescription" name="problemDescription" placeholder="Опишите проблему с принтером"></textarea>
+
+  <button type="submit">Вызвать мастера</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  © 2024 Завод филамента. Все права защищены.
+</footer>
+
+<script>
+  // Пример простой обработки отправки форм (без реального backend)
+  document.getElementById('masterclass-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Спасибо за запись на мастер-класс! Мы свяжемся с вами в ближайшее время.');
+    this.reset();
+    });
+  document.getElementById('repair-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Заявка на вызов мастера принята! Наш специалист свяжется с вами.');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
